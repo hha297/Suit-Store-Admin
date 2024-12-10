@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { ModalProvider } from '@/providers/ModalProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ClerkProvider>
                         <html lang="en">
                                 <body>
+                                        <ModalProvider />
                                         <header>
                                                 <SignedOut>
                                                         <SignInButton />
