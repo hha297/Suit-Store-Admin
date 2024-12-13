@@ -14,7 +14,7 @@ const SetupPage = () => {
                         onOpen();
                 }
         }, [isOpen, onOpen]);
-        return <div className="text-3xl">Root</div>;
+        return null;
 };
 
 export default SetupPage;
