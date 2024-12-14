@@ -17,14 +17,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 <body>
                                         <ToastProvider />
                                         <ModalProvider />
-                                        <header>
+                                        {/* <header>
                                                 <SignedOut>
                                                         <SignInButton />
                                                 </SignedOut>
                                                 <SignedIn>
                                                         <UserButton />
                                                 </SignedIn>
-                                        </header>
+                                        </header> */}
                                         {children}
                                 </body>
                         </html>
