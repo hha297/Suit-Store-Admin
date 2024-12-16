@@ -7,6 +7,7 @@ export default async function DashboardLayout({ children, params }: { children: 
         if (!userId) {
                 redirect('/sign-in');
         }
+        const billboard = await prismadb.billboard.findMany({});
 
         const store = await prismadb.store.findFirst({
                 where: {
