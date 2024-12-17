@@ -54,7 +54,8 @@ const BillBoardForm: React.FC<BillBoardFormProps> = ({ initialData }) => {
                         }
                         toast.success(toastMessage);
                         router.refresh();
-                        router.push('/');
+
+                        router.push(`/${params.storeId}/billboards`);
                 } catch (error) {
                         toast.error('Something went wrong');
                         console.log(error);
@@ -68,7 +69,7 @@ const BillBoardForm: React.FC<BillBoardFormProps> = ({ initialData }) => {
                         setLoading(true);
                         await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
                         router.refresh();
-                        router.push('/');
+                        router.push(`/${params.storeId}/billboards`);
                         toast.success('Billboard deleted successfully');
                 } catch (error) {
                         toast.error('Make sure you removed all categories using this billboard first');
